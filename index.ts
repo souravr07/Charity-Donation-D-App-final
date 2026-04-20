@@ -1,12 +1,4 @@
-/**
- *  The Application Programming Interface (API) is the collection of
- *  functions, classes and types offered by the Ethers library.
- *
- *  @_section: api:Application Programming Interface  [about-api]
- *  @_navTitle: API
- */
-import * as ethers from "./ethers.js";
+import z4 from "./classic/index.js";
+export * from "./classic/index.js";
 
-export { ethers };
-
-export * from "./ethers.js";
+export default z4;
