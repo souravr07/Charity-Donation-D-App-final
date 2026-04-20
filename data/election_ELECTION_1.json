@@ -1,0 +1,19 @@
+{
+  "electionId": "ELECTION_1",
+  "title": "National Election",
+  "contests": [
+    {
+      "id": "mayor",
+      "title": "Choose one Mayor",
+      "type": "SINGLE",
+      "options": ["Candidate A", "Candidate B", "Candidate C"]
+    },
+    {
+      "id": "council",
+      "title": "Choose up to 2 Council Members",
+      "type": "MULTI",
+      "maxSelections": 2,
+      "options": ["Member 1", "Member 2", "Member 3", "Member 4"]
+    }
+  ]
+}
