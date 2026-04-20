@@ -1,43 +1,33 @@
 "use strict";
-/**
- *  When interacting with Ethereum, it is necessary to use a private
- *  key authenticate actions by signing a payload.
- *
- *  Wallets are the simplest way to expose the concept of an
- *  //Externally Owner Account// (EOA) as it wraps a private key
- *  and supports high-level methods to sign common types of interaction
- *  and send transactions.
- *
- *  The class most developers will want to use is [[Wallet]], which
- *  can load a private key directly or from any common wallet format.
- *
- *  The [[HDNodeWallet]] can be used when it is necessary to access
- *  low-level details of how an HD wallets are derived, exported
- *  or imported.
- *
- *  @_section: api/wallet:Wallets  [about-wallets]
- */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Wallet = exports.Mnemonic = exports.encryptKeystoreJsonSync = exports.encryptKeystoreJson = exports.decryptKeystoreJson = exports.decryptKeystoreJsonSync = exports.isKeystoreJson = exports.decryptCrowdsaleJson = exports.isCrowdsaleJson = exports.HDNodeVoidWallet = exports.HDNodeWallet = exports.getIndexedAccountPath = exports.getAccountPath = exports.defaultPath = exports.BaseWallet = void 0;
-var base_wallet_js_1 = require("./base-wallet.js");
-Object.defineProperty(exports, "BaseWallet", { enumerable: true, get: function () { return base_wallet_js_1.BaseWallet; } });
-var hdwallet_js_1 = require("./hdwallet.js");
-Object.defineProperty(exports, "defaultPath", { enumerable: true, get: function () { return hdwallet_js_1.defaultPath; } });
-Object.defineProperty(exports, "getAccountPath", { enumerable: true, get: function () { return hdwallet_js_1.getAccountPath; } });
-Object.defineProperty(exports, "getIndexedAccountPath", { enumerable: true, get: function () { return hdwallet_js_1.getIndexedAccountPath; } });
-Object.defineProperty(exports, "HDNodeWallet", { enumerable: true, get: function () { return hdwallet_js_1.HDNodeWallet; } });
-Object.defineProperty(exports, "HDNodeVoidWallet", { enumerable: true, get: function () { return hdwallet_js_1.HDNodeVoidWallet; } });
-var json_crowdsale_js_1 = require("./json-crowdsale.js");
-Object.defineProperty(exports, "isCrowdsaleJson", { enumerable: true, get: function () { return json_crowdsale_js_1.isCrowdsaleJson; } });
-Object.defineProperty(exports, "decryptCrowdsaleJson", { enumerable: true, get: function () { return json_crowdsale_js_1.decryptCrowdsaleJson; } });
-var json_keystore_js_1 = require("./json-keystore.js");
-Object.defineProperty(exports, "isKeystoreJson", { enumerable: true, get: function () { return json_keystore_js_1.isKeystoreJson; } });
-Object.defineProperty(exports, "decryptKeystoreJsonSync", { enumerable: true, get: function () { return json_keystore_js_1.decryptKeystoreJsonSync; } });
-Object.defineProperty(exports, "decryptKeystoreJson", { enumerable: true, get: function () { return json_keystore_js_1.decryptKeystoreJson; } });
-Object.defineProperty(exports, "encryptKeystoreJson", { enumerable: true, get: function () { return json_keystore_js_1.encryptKeystoreJson; } });
-Object.defineProperty(exports, "encryptKeystoreJsonSync", { enumerable: true, get: function () { return json_keystore_js_1.encryptKeystoreJsonSync; } });
-var mnemonic_js_1 = require("./mnemonic.js");
-Object.defineProperty(exports, "Mnemonic", { enumerable: true, get: function () { return mnemonic_js_1.Mnemonic; } });
-var wallet_js_1 = require("./wallet.js");
-Object.defineProperty(exports, "Wallet", { enumerable: true, get: function () { return wallet_js_1.Wallet; } });
+exports.wordlists = exports.WordlistOwlA = exports.WordlistOwl = exports.LangEn = exports.Wordlist = void 0;
+/**
+ *  A Wordlist is a set of 2048 words used to encode private keys
+ *  (or other binary data) that is easier for humans to write down,
+ *  transcribe and dictate.
+ *
+ *  The [[link-bip-39]] standard includes several checksum bits,
+ *  depending on the size of the mnemonic phrase.
+ *
+ *  A mnemonic phrase may be 12, 15, 18, 21 or 24 words long. For
+ *  most purposes 12 word mnemonics should be used, as including
+ *  additional words increases the difficulty and potential for
+ *  mistakes and does not offer any effective improvement on security.
+ *
+ *  There are a variety of [[link-bip39-wordlists]] for different
+ *  languages, but for maximal compatibility, the
+ *  [English Wordlist](LangEn) is recommended.
+ *
+ *  @_section: api/wordlists:Wordlists [about-wordlists]
+ */
+var wordlist_js_1 = require("./wordlist.js");
+Object.defineProperty(exports, "Wordlist", { enumerable: true, get: function () { return wordlist_js_1.Wordlist; } });
+var lang_en_js_1 = require("./lang-en.js");
+Object.defineProperty(exports, "LangEn", { enumerable: true, get: function () { return lang_en_js_1.LangEn; } });
+var wordlist_owl_js_1 = require("./wordlist-owl.js");
+Object.defineProperty(exports, "WordlistOwl", { enumerable: true, get: function () { return wordlist_owl_js_1.WordlistOwl; } });
+var wordlist_owla_js_1 = require("./wordlist-owla.js");
+Object.defineProperty(exports, "WordlistOwlA", { enumerable: true, get: function () { return wordlist_owla_js_1.WordlistOwlA; } });
+var wordlists_js_1 = require("./wordlists.js");
+Object.defineProperty(exports, "wordlists", { enumerable: true, get: function () { return wordlists_js_1.wordlists; } });
 //# sourceMappingURL=index.js.map
