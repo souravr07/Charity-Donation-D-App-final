@@ -1,14 +1,15 @@
-export { default as MAX } from './max.js';
-export { default as NIL } from './nil.js';
-export { default as parse } from './parse.js';
-export { default as stringify } from './stringify.js';
-export { default as v1 } from './v1.js';
-export { default as v1ToV6 } from './v1ToV6.js';
-export { default as v3 } from './v3.js';
-export { default as v4 } from './v4.js';
-export { default as v5 } from './v5.js';
-export { default as v6 } from './v6.js';
-export { default as v6ToV1 } from './v6ToV1.js';
-export { default as v7 } from './v7.js';
-export { default as validate } from './validate.js';
-export { default as version } from './version.js';
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ethers = void 0;
+const tslib_1 = require("tslib");
+/**
+ *  The Application Programming Interface (API) is the collection of
+ *  functions, classes and types offered by the Ethers library.
+ *
+ *  @_section: api:Application Programming Interface  [about-api]
+ *  @_navTitle: API
+ */
+const ethers = tslib_1.__importStar(require("./ethers.js"));
+exports.ethers = ethers;
+tslib_1.__exportStar(require("./ethers.js"), exports);
+//# sourceMappingURL=index.js.map
