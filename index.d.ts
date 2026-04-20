@@ -1,11 +1,25 @@
 /**
- *  The Application Programming Interface (API) is the collection of
- *  functions, classes and types offered by the Ethers library.
+ *  A fundamental building block of Ethereum is the underlying
+ *  cryptographic primitives.
  *
- *  @_section: api:Application Programming Interface  [about-api]
- *  @_navTitle: API
+ *  @_section: api/crypto:Cryptographic Functions   [about-crypto]
  */
-import * as ethers from "./ethers.js";
-export { ethers };
-export * from "./ethers.js";
+import { computeHmac } from "./hmac.js";
+import { keccak256 } from "./keccak.js";
+import { ripemd160 } from "./ripemd160.js";
+import { pbkdf2 } from "./pbkdf2.js";
+import { randomBytes } from "./random.js";
+import { scrypt, scryptSync } from "./scrypt.js";
+import { sha256, sha512 } from "./sha2.js";
+export { computeHmac, randomBytes, keccak256, ripemd160, sha256, sha512, pbkdf2, scrypt, scryptSync };
+export { SigningKey } from "./signing-key.js";
+export { Signature } from "./signature.js";
+/**
+ *  Once called, prevents any future change to the underlying cryptographic
+ *  primitives using the ``.register`` feature for hooks.
+ */
+declare function lock(): void;
+export { lock };
+export type { ProgressCallback } from "./scrypt.js";
+export type { SignatureLike } from "./signature.js";
 //# sourceMappingURL=index.d.ts.map
