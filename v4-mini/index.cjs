@@ -27,6 +27,6 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.z = void 0;
-const z = __importStar(require("./external.cjs"));
+const z = __importStar(require("../v4/mini/external.cjs"));
 exports.z = z;
-__exportStar(require("./external.cjs"), exports);
+__exportStar(require("../v4/mini/external.cjs"), exports);
