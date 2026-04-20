@@ -1,33 +1,29 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.wordlists = exports.WordlistOwlA = exports.WordlistOwl = exports.LangEn = exports.Wordlist = void 0;
 /**
- *  A Wordlist is a set of 2048 words used to encode private keys
- *  (or other binary data) that is easier for humans to write down,
- *  transcribe and dictate.
+ *  Addresses are a fundamental part of interacting with Ethereum. They
+ *  represent the global identity of Externally Owned Accounts (accounts
+ *  backed by a private key) and contracts.
  *
- *  The [[link-bip-39]] standard includes several checksum bits,
- *  depending on the size of the mnemonic phrase.
+ *  The Ethereum Naming Service (ENS) provides an interconnected ecosystem
+ *  of contracts, standards and libraries which enable looking up an
+ *  address for an ENS name.
  *
- *  A mnemonic phrase may be 12, 15, 18, 21 or 24 words long. For
- *  most purposes 12 word mnemonics should be used, as including
- *  additional words increases the difficulty and potential for
- *  mistakes and does not offer any effective improvement on security.
+ *  These functions help convert between various formats, validate
+ *  addresses and safely resolve ENS names.
  *
- *  There are a variety of [[link-bip39-wordlists]] for different
- *  languages, but for maximal compatibility, the
- *  [English Wordlist](LangEn) is recommended.
- *
- *  @_section: api/wordlists:Wordlists [about-wordlists]
+ *  @_section: api/address:Addresses  [about-addresses]
  */
-var wordlist_js_1 = require("./wordlist.js");
-Object.defineProperty(exports, "Wordlist", { enumerable: true, get: function () { return wordlist_js_1.Wordlist; } });
-var lang_en_js_1 = require("./lang-en.js");
-Object.defineProperty(exports, "LangEn", { enumerable: true, get: function () { return lang_en_js_1.LangEn; } });
-var wordlist_owl_js_1 = require("./wordlist-owl.js");
-Object.defineProperty(exports, "WordlistOwl", { enumerable: true, get: function () { return wordlist_owl_js_1.WordlistOwl; } });
-var wordlist_owla_js_1 = require("./wordlist-owla.js");
-Object.defineProperty(exports, "WordlistOwlA", { enumerable: true, get: function () { return wordlist_owla_js_1.WordlistOwlA; } });
-var wordlists_js_1 = require("./wordlists.js");
-Object.defineProperty(exports, "wordlists", { enumerable: true, get: function () { return wordlists_js_1.wordlists; } });
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.resolveAddress = exports.isAddress = exports.isAddressable = exports.getCreate2Address = exports.getCreateAddress = exports.getIcapAddress = exports.getAddress = void 0;
+null;
+var address_js_1 = require("./address.js");
+Object.defineProperty(exports, "getAddress", { enumerable: true, get: function () { return address_js_1.getAddress; } });
+Object.defineProperty(exports, "getIcapAddress", { enumerable: true, get: function () { return address_js_1.getIcapAddress; } });
+var contract_address_js_1 = require("./contract-address.js");
+Object.defineProperty(exports, "getCreateAddress", { enumerable: true, get: function () { return contract_address_js_1.getCreateAddress; } });
+Object.defineProperty(exports, "getCreate2Address", { enumerable: true, get: function () { return contract_address_js_1.getCreate2Address; } });
+var checks_js_1 = require("./checks.js");
+Object.defineProperty(exports, "isAddressable", { enumerable: true, get: function () { return checks_js_1.isAddressable; } });
+Object.defineProperty(exports, "isAddress", { enumerable: true, get: function () { return checks_js_1.isAddress; } });
+Object.defineProperty(exports, "resolveAddress", { enumerable: true, get: function () { return checks_js_1.resolveAddress; } });
 //# sourceMappingURL=index.js.map
