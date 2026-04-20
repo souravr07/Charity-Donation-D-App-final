@@ -1,30 +1,25 @@
 /**
- *  There are many simple utilities required to interact with
- *  Ethereum and to simplify the library, without increasing
- *  the library dependencies for simple functions.
+ *  A Wordlist is a set of 2048 words used to encode private keys
+ *  (or other binary data) that is easier for humans to write down,
+ *  transcribe and dictate.
  *
- *  @_section api/utils:Utilities  [about-utils]
+ *  The [[link-bip-39]] standard includes several checksum bits,
+ *  depending on the size of the mnemonic phrase.
+ *
+ *  A mnemonic phrase may be 12, 15, 18, 21 or 24 words long. For
+ *  most purposes 12 word mnemonics should be used, as including
+ *  additional words increases the difficulty and potential for
+ *  mistakes and does not offer any effective improvement on security.
+ *
+ *  There are a variety of [[link-bip39-wordlists]] for different
+ *  languages, but for maximal compatibility, the
+ *  [English Wordlist](LangEn) is recommended.
+ *
+ *  @_section: api/wordlists:Wordlists [about-wordlists]
  */
-export { decodeBase58, encodeBase58 } from "./base58.js";
-export { decodeBase64, encodeBase64 } from "./base64.js";
-export { getBytes, getBytesCopy, isHexString, isBytesLike, hexlify, concat, dataLength, dataSlice, stripZerosLeft, zeroPadValue, zeroPadBytes } from "./data.js";
-export { isCallException, isError, assert, assertArgument, assertArgumentCount, assertPrivate, assertNormalize, makeError } from "./errors.js";
-export { EventPayload } from "./events.js";
-export { FetchRequest, FetchResponse, FetchCancelSignal, } from "./fetch.js";
-export { FixedNumber } from "./fixednumber.js";
-export { fromTwos, toTwos, mask, getBigInt, getNumber, getUint, toBigInt, toNumber, toBeHex, toBeArray, toQuantity } from "./maths.js";
-export { resolveProperties, defineProperties } from "./properties.js";
-export { decodeRlp } from "./rlp-decode.js";
-export { encodeRlp } from "./rlp-encode.js";
-export { formatEther, parseEther, formatUnits, parseUnits } from "./units.js";
-export { toUtf8Bytes, toUtf8CodePoints, toUtf8String, Utf8ErrorFuncs, } from "./utf8.js";
-export { uuidV4 } from "./uuid.js";
-export type { BytesLike } from "./data.js";
-export type { ErrorCode, EthersError, UnknownError, NotImplementedError, UnsupportedOperationError, NetworkError, ServerError, TimeoutError, BadDataError, CancelledError, BufferOverrunError, NumericFaultError, InvalidArgumentError, MissingArgumentError, UnexpectedArgumentError, CallExceptionError, InsufficientFundsError, NonceExpiredError, OffchainFaultError, ReplacementUnderpricedError, TransactionReplacedError, UnconfiguredNameError, ActionRejectedError, CallExceptionAction, CallExceptionTransaction, CodedEthersError } from "./errors.js";
-export type { EventEmitterable, Listener } from "./events.js";
-export type { GetUrlResponse, FetchPreflightFunc, FetchProcessFunc, FetchRetryFunc, FetchGatewayFunc, FetchGetUrlFunc } from "./fetch.js";
-export type { FixedFormat } from "./fixednumber.js";
-export type { BigNumberish, Numeric } from "./maths.js";
-export type { RlpStructuredData, RlpStructuredDataish } from "./rlp.js";
-export type { Utf8ErrorFunc, UnicodeNormalizationForm, Utf8ErrorReason } from "./utf8.js";
+export { Wordlist } from "./wordlist.js";
+export { LangEn } from "./lang-en.js";
+export { WordlistOwl } from "./wordlist-owl.js";
+export { WordlistOwlA } from "./wordlist-owla.js";
+export { wordlists } from "./wordlists.js";
 //# sourceMappingURL=index.d.ts.map
